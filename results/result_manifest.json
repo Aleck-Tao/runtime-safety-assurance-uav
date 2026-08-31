@@ -1,0 +1,69 @@
+{
+  "data_manifest_sha256": "bc6a548482985aaf731491f66ff1ceec172ac184ccb466fa28f4a9bfb7450986",
+  "generated_by": "runtime_assurance.pipeline.run_benchmark",
+  "generator_version": "0.1.0",
+  "result_count": 12,
+  "results": [
+    {
+      "bytes": 5067,
+      "path": "results/benchmark_dashboard.svg",
+      "sha256": "4aea143dc932edfc1068366746dab044ed70af9081b79538c928b1f9fa9c028c"
+    },
+    {
+      "bytes": 1654,
+      "path": "results/benchmark_report.md",
+      "sha256": "6f0e04a4b7e30ae75f0d73055f6b7da207c31c02f04f55b3efd8a72c6395e083"
+    },
+    {
+      "bytes": 14366,
+      "path": "results/benchmark_runs.csv",
+      "sha256": "fe260a2b5b767978c1b5e06b5a90814fba2b363652634bd9c6682bdfd9b34a1f"
+    },
+    {
+      "bytes": 21751,
+      "path": "results/benchmark_summary.json",
+      "sha256": "1b03c9f58c0ef13d8f121c792986e5bcc589751393f7b5c226f0afa028814a2f"
+    },
+    {
+      "bytes": 899616,
+      "path": "results/case_timelines/baseline.jsonl",
+      "sha256": "c31b8420093f413d3c57055110114d1a518e2c407450516d68f8267faf413116"
+    },
+    {
+      "bytes": 919785,
+      "path": "results/case_timelines/communication_loss.jsonl",
+      "sha256": "6d03d01042a02792e03a80426050b7b6d79e430862dadf50a996581707fcd5dc"
+    },
+    {
+      "bytes": 919113,
+      "path": "results/case_timelines/compound_failure.jsonl",
+      "sha256": "906ad9a2d7f601ff03ed8f6f3afe17e80d575dc89b59eeb4b586d2605770df58"
+    },
+    {
+      "bytes": 920835,
+      "path": "results/case_timelines/cross_modal_disagreement.jsonl",
+      "sha256": "3876ec850aee7a943f90426cdf3d2b56b930d5ebeda3ed9d35148ba7b9859de3"
+    },
+    {
+      "bytes": 908687,
+      "path": "results/case_timelines/lidar_dropout.jsonl",
+      "sha256": "db2a2a404f575e595cb10a4fe8ffea9a84d70d133fbcb8f5ec97ff8a5e14221b"
+    },
+    {
+      "bytes": 914028,
+      "path": "results/case_timelines/localization_drift.jsonl",
+      "sha256": "9f033d5fb1feb8afc4d5afb6d32394ccfb7f7f37b542bcbdc69a39cca45509f0"
+    },
+    {
+      "bytes": 913154,
+      "path": "results/case_timelines/obstacle_intrusion.jsonl",
+      "sha256": "2f06f10c551075808e2347aa6d00c7e9fd87a0d4bdd0fff982844d42f1b006c7"
+    },
+    {
+      "bytes": 2169,
+      "path": "results/representative_transitions.csv",
+      "sha256": "e9800cf91d949647cd33b03fc755c198a46f5af7b3f64e58f8861d8be05b7647"
+    }
+  ],
+  "schema_version": "1.0"
+}

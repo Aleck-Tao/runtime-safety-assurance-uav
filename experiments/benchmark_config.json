@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "duration_s": 60.0,
+  "sample_period_s": 0.1,
+  "scenario_oracle": {
+    "comm_age_ms_min": 1200.0,
+    "cross_modal_consistency_max": 0.35,
+    "lidar_age_ms_min": 500.0,
+    "localization_confidence_max": 0.45,
+    "stopping_margin_m_max": 0.0
+  },
+  "representative_seed": 101,
+  "seeds": [101, 211, 307, 401, 503, 601, 701, 809, 907, 1009],
+  "scenarios": [
+    {"id": "baseline", "fault": "none", "onset_s": null, "expected_monitor_ids": [], "action_trigger_monitor_id": null, "expected_action": "CONTINUE"},
+    {"id": "localization_drift", "fault": "localization_drift", "onset_s": 20.0, "expected_monitor_ids": ["M-LOC"], "action_trigger_monitor_id": "M-LOC", "expected_action": "HOVER"},
+    {"id": "lidar_dropout", "fault": "lidar_dropout", "onset_s": 20.0, "expected_monitor_ids": ["M-LIDAR-FRESH"], "action_trigger_monitor_id": "M-LIDAR-FRESH", "expected_action": "HOVER"},
+    {"id": "cross_modal_disagreement", "fault": "cross_modal_disagreement", "onset_s": 20.0, "expected_monitor_ids": ["M-XMODAL"], "action_trigger_monitor_id": "M-XMODAL", "expected_action": "HOVER"},
+    {"id": "obstacle_intrusion", "fault": "obstacle_intrusion", "onset_s": 20.0, "expected_monitor_ids": ["M-OBS-MARGIN"], "action_trigger_monitor_id": "M-OBS-MARGIN", "expected_action": "HOVER"},
+    {"id": "communication_loss", "fault": "communication_loss", "onset_s": 20.0, "expected_monitor_ids": ["M-COMM-FRESH"], "action_trigger_monitor_id": "M-COMM-FRESH", "expected_action": "RETURN_HOME"},
+    {"id": "compound_failure", "fault": "compound_failure", "onset_s": 20.0, "expected_monitor_ids": ["M-LOC", "M-LIDAR-FRESH", "M-COMM-FRESH", "M-FALLBACK"], "action_trigger_monitor_id": "M-FALLBACK", "expected_action": "ABORT"}
+  ]
+}

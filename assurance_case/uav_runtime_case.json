@@ -1,0 +1,74 @@
+{
+  "case_id": "AC-UAV-RUNTIME-001",
+  "schema_version": "0.2",
+  "title": "Fixed runtime evidence argument for synthetic autonomous-UAV telemetry",
+  "scope": "Persistence-qualified monitor states updated through the current telemetry frame, plus fallback recommendations during deterministic replay. Claim support is not a physical-safety classification.",
+  "top_claim_id": "C-0",
+  "assumptions": [
+    {"id": "A-TELEM", "validation_status": "UNVALIDATED", "statement": "Replay fields faithfully represent upstream telemetry, preserve declared units, and have not been maliciously altered."},
+    {"id": "A-CLOCK", "validation_status": "UNVALIDATED", "statement": "Telemetry timestamps and age fields share a sufficiently synchronized time basis for the configured freshness predicates."},
+    {"id": "A-SCORES", "validation_status": "UNVALIDATED", "statement": "Localization-confidence and cross-modal-consistency scores are calibrated for the declared operating context."},
+    {"id": "A-BRAKE", "validation_status": "UNVALIDATED", "statement": "The stopping calculation uses a conservative deceleration lower bound and a response-time budget that are valid for the vehicle and context."},
+    {"id": "A-LINK", "validation_status": "UNVALIDATED", "statement": "The current mission mode requires supervisory-link freshness at the configured bound."},
+    {"id": "A-FALLBACK", "validation_status": "UNVALIDATED", "statement": "fallback_available truthfully reports whether the recommended fallback path exists; command delivery and fallback effectiveness are not observed."}
+  ],
+  "non_goals": [
+    {"id": "NG-STPA", "statement": "Complete or independently reviewed system-level STPA."},
+    {"id": "NG-FLIGHT", "statement": "Physical-flight safety, airworthiness, certification, or threshold validation for a specific vehicle."},
+    {"id": "NG-CONTROL", "statement": "Command delivery, actuator response, closed-loop recovery, or a verified backup controller."},
+    {"id": "NG-RTA", "statement": "A Simplex/RTA safety architecture, verified safety filter, or certified fallback controller."},
+    {"id": "NG-STANDARD", "statement": "Conformance with SACM, GSN, or an aviation assurance standard."},
+    {"id": "NG-DYNAMIC", "statement": "Dynamic argument restructuring, evidence lifecycle management, change-impact analysis, or assurance governance."},
+    {"id": "NG-VALIDITY", "statement": "Real-world false-intervention probability, fault prevalence, or detector validity."}
+  ],
+  "claims": [
+    {
+      "id": "C-0",
+      "statement": "Given the declared assumptions and telemetry processed through the current frame, all persistence-qualified monitor conditions required for continuation remain in their pass state.",
+      "strategy": "all",
+      "child_claim_ids": ["C-STATE", "C-SEPARATION", "C-LINK", "C-FALLBACK"],
+      "constraint_ids": ["SC-1", "SC-2", "SC-3", "SC-4"],
+      "assumption_ids": ["A-TELEM", "A-CLOCK"]
+    },
+    {
+      "id": "C-STATE",
+      "statement": "The persistence-qualified localization and perception monitor states support the configured continuation policy.",
+      "strategy": "all",
+      "evidence_ids": ["E-LOC", "E-LIDAR-FRESH", "E-XMODAL"],
+      "constraint_ids": ["SC-2"],
+      "assumption_ids": ["A-TELEM", "A-CLOCK", "A-SCORES"]
+    },
+    {
+      "id": "C-SEPARATION",
+      "statement": "Under the declared stopping-model assumptions, the persistence-qualified stopping-margin monitor state supports continuation.",
+      "strategy": "all",
+      "evidence_ids": ["E-OBS-MARGIN"],
+      "constraint_ids": ["SC-1"],
+      "assumption_ids": ["A-TELEM", "A-CLOCK", "A-BRAKE"]
+    },
+    {
+      "id": "C-LINK",
+      "statement": "Under the declared supervisory-mode assumption, the persistence-qualified communication-freshness monitor state supports continuation.",
+      "strategy": "all",
+      "evidence_ids": ["E-COMM-FRESH"],
+      "constraint_ids": ["SC-3"],
+      "assumption_ids": ["A-CLOCK", "A-LINK"]
+    },
+    {
+      "id": "C-FALLBACK",
+      "statement": "The persistence-qualified reported fallback-availability monitor state supports the existence of a configured fallback path.",
+      "strategy": "all",
+      "evidence_ids": ["E-FALLBACK"],
+      "constraint_ids": ["SC-4"],
+      "assumption_ids": ["A-FALLBACK"]
+    }
+  ],
+  "evidence": [
+    {"id": "E-LOC", "monitor_id": "M-LOC", "artifact": "persistence-qualified localization-confidence result updated through the current frame"},
+    {"id": "E-LIDAR-FRESH", "monitor_id": "M-LIDAR-FRESH", "artifact": "persistence-qualified LiDAR-age result updated through the current frame"},
+    {"id": "E-XMODAL", "monitor_id": "M-XMODAL", "artifact": "persistence-qualified camera-LiDAR consistency result updated through the current frame"},
+    {"id": "E-OBS-MARGIN", "monitor_id": "M-OBS-MARGIN", "artifact": "persistence-qualified stopping-margin result derived under the versioned model assumptions"},
+    {"id": "E-COMM-FRESH", "monitor_id": "M-COMM-FRESH", "artifact": "persistence-qualified communication-age result updated through the current frame"},
+    {"id": "E-FALLBACK", "monitor_id": "M-FALLBACK", "artifact": "persistence-qualified reported fallback-availability result; execution is not observed"}
+  ]
+}

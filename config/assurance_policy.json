@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "persistence": {
+    "failure_samples": 3,
+    "recovery_samples": 5,
+    "warning_samples": 2
+  },
+  "action_priority": {
+    "ABORT": 5,
+    "RETURN_HOME": 4,
+    "HOVER": 3,
+    "SLOW": 2,
+    "CONTINUE": 1
+  },
+  "flight_envelope": {
+    "guaranteed_deceleration_lower_bound_mps2": 2.5,
+    "minimum_clearance_m": 1.5,
+    "response_time_budget_s": 0.5
+  },
+  "monitors": [
+    {
+      "id": "M-LOC",
+      "metric": "localization_confidence",
+      "kind": "high_is_good",
+      "pass_threshold": 0.80,
+      "fail_threshold": 0.55,
+      "warning_action": "SLOW",
+      "failure_action": "HOVER",
+      "missing_action": "ABORT",
+      "unit": "ratio"
+    },
+    {
+      "id": "M-LIDAR-FRESH",
+      "metric": "lidar_age_ms",
+      "kind": "low_is_good",
+      "pass_threshold": 150.0,
+      "fail_threshold": 400.0,
+      "warning_action": "SLOW",
+      "failure_action": "HOVER",
+      "missing_action": "ABORT",
+      "unit": "ms"
+    },
+    {
+      "id": "M-XMODAL",
+      "metric": "cross_modal_consistency",
+      "kind": "high_is_good",
+      "pass_threshold": 0.75,
+      "fail_threshold": 0.45,
+      "warning_action": "SLOW",
+      "failure_action": "HOVER",
+      "missing_action": "ABORT",
+      "unit": "ratio"
+    },
+    {
+      "id": "M-OBS-MARGIN",
+      "metric": "stopping_margin_m",
+      "kind": "high_is_good",
+      "pass_threshold": 1.50,
+      "fail_threshold": 0.00,
+      "warning_action": "SLOW",
+      "failure_action": "HOVER",
+      "missing_action": "ABORT",
+      "unit": "m"
+    },
+    {
+      "id": "M-COMM-FRESH",
+      "metric": "comm_age_ms",
+      "kind": "low_is_good",
+      "pass_threshold": 300.0,
+      "fail_threshold": 1000.0,
+      "warning_action": "SLOW",
+      "failure_action": "RETURN_HOME",
+      "missing_action": "ABORT",
+      "unit": "ms"
+    },
+    {
+      "id": "M-FALLBACK",
+      "metric": "fallback_available",
+      "kind": "boolean_true",
+      "warning_action": "CONTINUE",
+      "failure_action": "ABORT",
+      "missing_action": "ABORT",
+      "unit": "boolean"
+    }
+  ]
+}

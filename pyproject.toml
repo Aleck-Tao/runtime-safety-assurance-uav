@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "runtime-safety-assurance-uav"
+version = "0.1.0"
+description = "Bounded runtime evidence-assurance prototype for synthetic UAV telemetry replay"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Yuanyuan Tao"}]
+dependencies = []
+
+[project.scripts]
+runtime-assurance = "runtime_assurance.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["runtime_assurance*"]

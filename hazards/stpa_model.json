@@ -1,0 +1,57 @@
+{
+  "analysis_id": "STPA-UAV-RUNTIME-001",
+  "schema_version": "0.2",
+  "method_scope": "Bounded, STPA-informed supervisor analysis; not a complete system-level STPA and not independently reviewed.",
+  "analysis_system_boundary": "Conceptual outdoor UAV mission system comprising the operator/supervisory station, autonomy stack, runtime assurance supervisor, flight controller, vehicle, sensing, and environment.",
+  "implemented_component_boundary": "Only the telemetry-driven runtime assurance supervisor and deterministic replay harness are implemented. Upstream telemetry validity, command delivery, vehicle dynamics, fallback execution, and environmental response are outside the code boundary.",
+  "losses": [
+    {"id": "L-1", "description": "People, property, or the vehicle are harmed by a collision."},
+    {"id": "L-2", "description": "The vehicle leaves the declared operational envelope or cannot be recovered."},
+    {"id": "L-3", "description": "Critical mission objectives or irreplaceable mission data are lost through an unrecoverable vehicle or mission state."}
+  ],
+  "hazards": [
+    {"id": "H-1", "loss_ids": ["L-1"], "description": "Vehicle speed and obstacle separation leave insufficient modeled distance to stop before the protected clearance boundary."},
+    {"id": "H-2", "loss_ids": ["L-1", "L-3"], "description": "Autonomous control relies on localization or perception evidence whose confidence, freshness, or cross-modal consistency is inadequate for the declared context."},
+    {"id": "H-3", "loss_ids": ["L-2", "L-3"], "description": "The mission remains in a supervisory mode requiring a fresh communication link while link-age evidence exceeds the declared bound."},
+    {"id": "H-4", "loss_ids": ["L-1", "L-2", "L-3"], "description": "Autonomous continuation requires a fallback path, but the fallback-availability input reports that no such path is available."}
+  ],
+  "control_structure": {
+    "control_actions": ["CONTINUE", "SLOW", "HOVER", "RETURN_HOME", "ABORT"],
+    "components": [
+      {"id": "CS-OPERATOR", "role": "human supervisor and mission station", "implemented": false},
+      {"id": "CS-AUTONOMY", "role": "mission, perception, state-estimation, and navigation stack", "implemented": false},
+      {"id": "CS-RAS", "role": "runtime evidence evaluator and fallback recommender", "implemented": true},
+      {"id": "CS-FC", "role": "flight controller", "implemented": false},
+      {"id": "CS-VEHICLE", "role": "airframe, actuators, and sensors", "implemented": false},
+      {"id": "CS-ENV", "role": "outdoor operating environment", "implemented": false}
+    ],
+    "edges": [
+      {"id": "CE-1", "from_component_id": "CS-OPERATOR", "to_component_id": "CS-AUTONOMY", "kind": "control_action", "items": ["mission intent", "supervisory mode"]},
+      {"id": "CE-2", "from_component_id": "CS-AUTONOMY", "to_component_id": "CS-RAS", "kind": "feedback", "items": ["localization confidence", "LiDAR age", "cross-modal consistency", "obstacle distance", "speed", "link age", "fallback availability"]},
+      {"id": "CE-3", "from_component_id": "CS-RAS", "to_component_id": "CS-AUTONOMY", "kind": "control_action", "items": ["CONTINUE", "SLOW", "HOVER", "RETURN_HOME", "ABORT"]},
+      {"id": "CE-4", "from_component_id": "CS-AUTONOMY", "to_component_id": "CS-FC", "kind": "control_action", "items": ["trajectory and mode command"]},
+      {"id": "CE-5", "from_component_id": "CS-FC", "to_component_id": "CS-VEHICLE", "kind": "control_action", "items": ["actuator command"]},
+      {"id": "CE-6", "from_component_id": "CS-VEHICLE", "to_component_id": "CS-AUTONOMY", "kind": "feedback", "items": ["vehicle state and sensor observations"]},
+      {"id": "CE-7", "from_component_id": "CS-ENV", "to_component_id": "CS-VEHICLE", "kind": "disturbance", "items": ["obstacles and environmental disturbances"]}
+    ]
+  },
+  "unsafe_control_actions": [
+    {"id": "UCA-1", "hazard_ids": ["H-1"], "control_action": "CONTINUE", "category": "provided", "context": "the modeled stopping-margin failure condition has persisted through the configured window and M-OBS-MARGIN is latched FAIL", "description": "CONTINUE is recommended after the persistence-qualified stopping-margin condition has failed."},
+    {"id": "UCA-2", "hazard_ids": ["H-2"], "control_action": "CONTINUE", "category": "provided", "context": "a localization, LiDAR-freshness, or cross-modal failure condition has persisted through the configured window and its monitor is latched FAIL", "description": "CONTINUE is recommended while persistence-qualified state/perception evidence lacks support."},
+    {"id": "UCA-3", "hazard_ids": ["H-3"], "control_action": "CONTINUE", "category": "applied too long", "context": "communication age has remained beyond the failure bound through the configured window and M-COMM-FRESH is latched FAIL", "description": "CONTINUE remains recommended after persistence-qualified supervisory-link evidence has failed."},
+    {"id": "UCA-4", "hazard_ids": ["H-4"], "control_action": "CONTINUE", "category": "applied too long", "context": "fallback availability has remained false or missing through the configured window and M-FALLBACK is latched FAIL", "description": "CONTINUE remains recommended after persistence-qualified fallback-availability evidence has failed."}
+  ],
+  "safety_constraints": [
+    {"id": "SC-1", "hazard_ids": ["H-1"], "uca_ids": ["UCA-1"], "description": "The supervisor shall not recommend CONTINUE after the stopping-margin monitor has latched failure."},
+    {"id": "SC-2", "hazard_ids": ["H-2"], "uca_ids": ["UCA-2"], "description": "The supervisor shall not recommend CONTINUE after localization, LiDAR-freshness, or cross-modal evidence has latched failure."},
+    {"id": "SC-3", "hazard_ids": ["H-3"], "uca_ids": ["UCA-3"], "description": "The supervisor shall not recommend CONTINUE after communication-freshness evidence has latched failure."},
+    {"id": "SC-4", "hazard_ids": ["H-4"], "uca_ids": ["UCA-4"], "description": "The supervisor shall not recommend CONTINUE after M-FALLBACK has latched failure."}
+  ],
+  "causal_scenarios": [
+    {"id": "CA-1", "uca_ids": ["UCA-1"], "description": "Obstacle range falls while speed remains high, but delayed range feedback or an optimistic stopping-model parameter prevents the supervisor from latching the margin failure."},
+    {"id": "CA-2", "uca_ids": ["UCA-2"], "description": "A LiDAR timestamp freezes while plausible measurements are reused and the age field is not advanced or is parsed incorrectly."},
+    {"id": "CA-3", "uca_ids": ["UCA-2"], "description": "Camera and LiDAR observations diverge, but a poorly calibrated consistency score remains above the failure band."},
+    {"id": "CA-4", "uca_ids": ["UCA-3"], "description": "The link heartbeat stops, but a frozen or misinterpreted timestamp suppresses the communication-age failure."},
+    {"id": "CA-5", "uca_ids": ["UCA-4"], "description": "A stale or misparsed fallback flag remains true, or a persistence/action-priority defect suppresses ABORT after fallback loss."}
+  ]
+}

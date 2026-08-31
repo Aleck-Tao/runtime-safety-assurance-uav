@@ -1,0 +1,623 @@
+{
+  "all_benchmark_checks_passed": true,
+  "benchmark_checks": [
+    {
+      "criterion": "mean pre-injection intervention rate equals 0",
+      "id": "no-pre-injection-intervention",
+      "passed": true,
+      "scenario_id": "baseline"
+    },
+    {
+      "criterion": "no monitor outside the declared scenario mapping latches failure",
+      "id": "no-unexpected-monitor-activation",
+      "passed": true,
+      "scenario_id": "baseline"
+    },
+    {
+      "criterion": "maximum selected action is exactly CONTINUE",
+      "id": "baseline-exact-continue",
+      "passed": true,
+      "scenario_id": "baseline"
+    },
+    {
+      "criterion": "mean pre-injection intervention rate equals 0",
+      "id": "no-pre-injection-intervention",
+      "passed": true,
+      "scenario_id": "localization_drift"
+    },
+    {
+      "criterion": "no monitor outside the declared scenario mapping latches failure",
+      "id": "no-unexpected-monitor-activation",
+      "passed": true,
+      "scenario_id": "localization_drift"
+    },
+    {
+      "criterion": "all scenario-mapped monitors latch failure in every seed",
+      "id": "expected-monitor-activation",
+      "passed": true,
+      "scenario_id": "localization_drift"
+    },
+    {
+      "criterion": "argument support becomes UNSUPPORTED in every seed",
+      "id": "support-loss-event",
+      "passed": true,
+      "scenario_id": "localization_drift"
+    },
+    {
+      "criterion": "p95 support-loss response relative to synthetic oracle <= 0.5 s",
+      "id": "assurance-response-time",
+      "passed": true,
+      "scenario_id": "localization_drift"
+    },
+    {
+      "criterion": "every seed selects exact action HOVER without a more severe maximum",
+      "id": "exact-action-selection",
+      "passed": true,
+      "scenario_id": "localization_drift"
+    },
+    {
+      "criterion": "p95 exact-action response from trigger raw failure <= 0.5 s",
+      "id": "policy-response-time",
+      "passed": true,
+      "scenario_id": "localization_drift"
+    },
+    {
+      "criterion": "mean positive-oracle time before exact expected action <= 0.5 s",
+      "id": "bounded-time-at-risk",
+      "passed": true,
+      "scenario_id": "localization_drift"
+    },
+    {
+      "criterion": "no action more severe than the declared expected action is selected",
+      "id": "no-overreaction",
+      "passed": true,
+      "scenario_id": "localization_drift"
+    },
+    {
+      "criterion": "after first exact selection, no lower-priority action appears while the synthetic oracle remains positive",
+      "id": "maintain-exact-action-while-oracle-positive",
+      "passed": true,
+      "scenario_id": "localization_drift"
+    },
+    {
+      "criterion": "mean pre-injection intervention rate equals 0",
+      "id": "no-pre-injection-intervention",
+      "passed": true,
+      "scenario_id": "lidar_dropout"
+    },
+    {
+      "criterion": "no monitor outside the declared scenario mapping latches failure",
+      "id": "no-unexpected-monitor-activation",
+      "passed": true,
+      "scenario_id": "lidar_dropout"
+    },
+    {
+      "criterion": "all scenario-mapped monitors latch failure in every seed",
+      "id": "expected-monitor-activation",
+      "passed": true,
+      "scenario_id": "lidar_dropout"
+    },
+    {
+      "criterion": "argument support becomes UNSUPPORTED in every seed",
+      "id": "support-loss-event",
+      "passed": true,
+      "scenario_id": "lidar_dropout"
+    },
+    {
+      "criterion": "p95 support-loss response relative to synthetic oracle <= 0.5 s",
+      "id": "assurance-response-time",
+      "passed": true,
+      "scenario_id": "lidar_dropout"
+    },
+    {
+      "criterion": "every seed selects exact action HOVER without a more severe maximum",
+      "id": "exact-action-selection",
+      "passed": true,
+      "scenario_id": "lidar_dropout"
+    },
+    {
+      "criterion": "p95 exact-action response from trigger raw failure <= 0.5 s",
+      "id": "policy-response-time",
+      "passed": true,
+      "scenario_id": "lidar_dropout"
+    },
+    {
+      "criterion": "mean positive-oracle time before exact expected action <= 0.5 s",
+      "id": "bounded-time-at-risk",
+      "passed": true,
+      "scenario_id": "lidar_dropout"
+    },
+    {
+      "criterion": "no action more severe than the declared expected action is selected",
+      "id": "no-overreaction",
+      "passed": true,
+      "scenario_id": "lidar_dropout"
+    },
+    {
+      "criterion": "after first exact selection, no lower-priority action appears while the synthetic oracle remains positive",
+      "id": "maintain-exact-action-while-oracle-positive",
+      "passed": true,
+      "scenario_id": "lidar_dropout"
+    },
+    {
+      "criterion": "mean pre-injection intervention rate equals 0",
+      "id": "no-pre-injection-intervention",
+      "passed": true,
+      "scenario_id": "cross_modal_disagreement"
+    },
+    {
+      "criterion": "no monitor outside the declared scenario mapping latches failure",
+      "id": "no-unexpected-monitor-activation",
+      "passed": true,
+      "scenario_id": "cross_modal_disagreement"
+    },
+    {
+      "criterion": "all scenario-mapped monitors latch failure in every seed",
+      "id": "expected-monitor-activation",
+      "passed": true,
+      "scenario_id": "cross_modal_disagreement"
+    },
+    {
+      "criterion": "argument support becomes UNSUPPORTED in every seed",
+      "id": "support-loss-event",
+      "passed": true,
+      "scenario_id": "cross_modal_disagreement"
+    },
+    {
+      "criterion": "p95 support-loss response relative to synthetic oracle <= 0.5 s",
+      "id": "assurance-response-time",
+      "passed": true,
+      "scenario_id": "cross_modal_disagreement"
+    },
+    {
+      "criterion": "every seed selects exact action HOVER without a more severe maximum",
+      "id": "exact-action-selection",
+      "passed": true,
+      "scenario_id": "cross_modal_disagreement"
+    },
+    {
+      "criterion": "p95 exact-action response from trigger raw failure <= 0.5 s",
+      "id": "policy-response-time",
+      "passed": true,
+      "scenario_id": "cross_modal_disagreement"
+    },
+    {
+      "criterion": "mean positive-oracle time before exact expected action <= 0.5 s",
+      "id": "bounded-time-at-risk",
+      "passed": true,
+      "scenario_id": "cross_modal_disagreement"
+    },
+    {
+      "criterion": "no action more severe than the declared expected action is selected",
+      "id": "no-overreaction",
+      "passed": true,
+      "scenario_id": "cross_modal_disagreement"
+    },
+    {
+      "criterion": "after first exact selection, no lower-priority action appears while the synthetic oracle remains positive",
+      "id": "maintain-exact-action-while-oracle-positive",
+      "passed": true,
+      "scenario_id": "cross_modal_disagreement"
+    },
+    {
+      "criterion": "mean pre-injection intervention rate equals 0",
+      "id": "no-pre-injection-intervention",
+      "passed": true,
+      "scenario_id": "obstacle_intrusion"
+    },
+    {
+      "criterion": "no monitor outside the declared scenario mapping latches failure",
+      "id": "no-unexpected-monitor-activation",
+      "passed": true,
+      "scenario_id": "obstacle_intrusion"
+    },
+    {
+      "criterion": "all scenario-mapped monitors latch failure in every seed",
+      "id": "expected-monitor-activation",
+      "passed": true,
+      "scenario_id": "obstacle_intrusion"
+    },
+    {
+      "criterion": "argument support becomes UNSUPPORTED in every seed",
+      "id": "support-loss-event",
+      "passed": true,
+      "scenario_id": "obstacle_intrusion"
+    },
+    {
+      "criterion": "p95 support-loss response relative to synthetic oracle <= 0.5 s",
+      "id": "assurance-response-time",
+      "passed": true,
+      "scenario_id": "obstacle_intrusion"
+    },
+    {
+      "criterion": "every seed selects exact action HOVER without a more severe maximum",
+      "id": "exact-action-selection",
+      "passed": true,
+      "scenario_id": "obstacle_intrusion"
+    },
+    {
+      "criterion": "p95 exact-action response from trigger raw failure <= 0.5 s",
+      "id": "policy-response-time",
+      "passed": true,
+      "scenario_id": "obstacle_intrusion"
+    },
+    {
+      "criterion": "mean positive-oracle time before exact expected action <= 0.5 s",
+      "id": "bounded-time-at-risk",
+      "passed": true,
+      "scenario_id": "obstacle_intrusion"
+    },
+    {
+      "criterion": "no action more severe than the declared expected action is selected",
+      "id": "no-overreaction",
+      "passed": true,
+      "scenario_id": "obstacle_intrusion"
+    },
+    {
+      "criterion": "after first exact selection, no lower-priority action appears while the synthetic oracle remains positive",
+      "id": "maintain-exact-action-while-oracle-positive",
+      "passed": true,
+      "scenario_id": "obstacle_intrusion"
+    },
+    {
+      "criterion": "mean pre-injection intervention rate equals 0",
+      "id": "no-pre-injection-intervention",
+      "passed": true,
+      "scenario_id": "communication_loss"
+    },
+    {
+      "criterion": "no monitor outside the declared scenario mapping latches failure",
+      "id": "no-unexpected-monitor-activation",
+      "passed": true,
+      "scenario_id": "communication_loss"
+    },
+    {
+      "criterion": "all scenario-mapped monitors latch failure in every seed",
+      "id": "expected-monitor-activation",
+      "passed": true,
+      "scenario_id": "communication_loss"
+    },
+    {
+      "criterion": "argument support becomes UNSUPPORTED in every seed",
+      "id": "support-loss-event",
+      "passed": true,
+      "scenario_id": "communication_loss"
+    },
+    {
+      "criterion": "p95 support-loss response relative to synthetic oracle <= 0.5 s",
+      "id": "assurance-response-time",
+      "passed": true,
+      "scenario_id": "communication_loss"
+    },
+    {
+      "criterion": "every seed selects exact action RETURN_HOME without a more severe maximum",
+      "id": "exact-action-selection",
+      "passed": true,
+      "scenario_id": "communication_loss"
+    },
+    {
+      "criterion": "p95 exact-action response from trigger raw failure <= 0.5 s",
+      "id": "policy-response-time",
+      "passed": true,
+      "scenario_id": "communication_loss"
+    },
+    {
+      "criterion": "mean positive-oracle time before exact expected action <= 0.5 s",
+      "id": "bounded-time-at-risk",
+      "passed": true,
+      "scenario_id": "communication_loss"
+    },
+    {
+      "criterion": "no action more severe than the declared expected action is selected",
+      "id": "no-overreaction",
+      "passed": true,
+      "scenario_id": "communication_loss"
+    },
+    {
+      "criterion": "after first exact selection, no lower-priority action appears while the synthetic oracle remains positive",
+      "id": "maintain-exact-action-while-oracle-positive",
+      "passed": true,
+      "scenario_id": "communication_loss"
+    },
+    {
+      "criterion": "mean pre-injection intervention rate equals 0",
+      "id": "no-pre-injection-intervention",
+      "passed": true,
+      "scenario_id": "compound_failure"
+    },
+    {
+      "criterion": "no monitor outside the declared scenario mapping latches failure",
+      "id": "no-unexpected-monitor-activation",
+      "passed": true,
+      "scenario_id": "compound_failure"
+    },
+    {
+      "criterion": "all scenario-mapped monitors latch failure in every seed",
+      "id": "expected-monitor-activation",
+      "passed": true,
+      "scenario_id": "compound_failure"
+    },
+    {
+      "criterion": "argument support becomes UNSUPPORTED in every seed",
+      "id": "support-loss-event",
+      "passed": true,
+      "scenario_id": "compound_failure"
+    },
+    {
+      "criterion": "p95 support-loss response relative to synthetic oracle <= 0.5 s",
+      "id": "assurance-response-time",
+      "passed": true,
+      "scenario_id": "compound_failure"
+    },
+    {
+      "criterion": "every seed selects exact action ABORT without a more severe maximum",
+      "id": "exact-action-selection",
+      "passed": true,
+      "scenario_id": "compound_failure"
+    },
+    {
+      "criterion": "p95 exact-action response from trigger raw failure <= 0.5 s",
+      "id": "policy-response-time",
+      "passed": true,
+      "scenario_id": "compound_failure"
+    },
+    {
+      "criterion": "mean positive-oracle time before exact expected action <= 0.5 s",
+      "id": "bounded-time-at-risk",
+      "passed": true,
+      "scenario_id": "compound_failure"
+    },
+    {
+      "criterion": "no action more severe than the declared expected action is selected",
+      "id": "no-overreaction",
+      "passed": true,
+      "scenario_id": "compound_failure"
+    },
+    {
+      "criterion": "after first exact selection, no lower-priority action appears while the synthetic oracle remains positive",
+      "id": "maintain-exact-action-while-oracle-positive",
+      "passed": true,
+      "scenario_id": "compound_failure"
+    }
+  ],
+  "data_manifest_sha256": "bc6a548482985aaf731491f66ff1ceec172ac184ccb466fa28f4a9bfb7450986",
+  "declared_assumptions": [
+    {
+      "id": "A-TELEM",
+      "validation_status": "UNVALIDATED"
+    },
+    {
+      "id": "A-CLOCK",
+      "validation_status": "UNVALIDATED"
+    },
+    {
+      "id": "A-SCORES",
+      "validation_status": "UNVALIDATED"
+    },
+    {
+      "id": "A-BRAKE",
+      "validation_status": "UNVALIDATED"
+    },
+    {
+      "id": "A-LINK",
+      "validation_status": "UNVALIDATED"
+    },
+    {
+      "id": "A-FALLBACK",
+      "validation_status": "UNVALIDATED"
+    }
+  ],
+  "duration_s": 60.0,
+  "oracle_interpretation": "separately configured synthetic scenario criteria; not independent ground truth",
+  "run_count": 70,
+  "sample_period_s": 0.1,
+  "scenario_count": 7,
+  "scenarios": [
+    {
+      "exact_expected_action_rate": null,
+      "expected_monitor_activation_rate": null,
+      "maximum_actions": [
+        "CONTINUE"
+      ],
+      "mean_assurance_response_time_s": null,
+      "mean_early_intervention_lead_s": null,
+      "mean_oracle_first_1s_unsupported_coverage": null,
+      "mean_overreaction_frames": 0.0,
+      "mean_policy_response_time_s": null,
+      "mean_post_selection_underreaction_frames": 0.0,
+      "mean_pre_injection_intervention_rate": 0.0,
+      "mean_pre_oracle_intervention_rate": null,
+      "mean_scenario_oracle_positive_coverage": null,
+      "mean_stopping_margin_violation_frames": 0.0,
+      "mean_time_at_risk_before_expected_action_s": null,
+      "overreaction_run_rate": 0.0,
+      "p95_assurance_response_time_s": null,
+      "p95_policy_response_time_s": null,
+      "post_selection_underreaction_run_rate": 0.0,
+      "pre_oracle_maximum_actions": [],
+      "runs": 10,
+      "scenario_id": "baseline",
+      "support_loss_detection_rate": null,
+      "unexpected_monitor_activation_rate": 0.0
+    },
+    {
+      "exact_expected_action_rate": 1.0,
+      "expected_monitor_activation_rate": 1.0,
+      "maximum_actions": [
+        "HOVER"
+      ],
+      "mean_assurance_response_time_s": -0.08,
+      "mean_early_intervention_lead_s": 0.78,
+      "mean_oracle_first_1s_unsupported_coverage": 1.0,
+      "mean_overreaction_frames": 0.0,
+      "mean_policy_response_time_s": 0.2,
+      "mean_post_selection_underreaction_frames": 0.0,
+      "mean_pre_injection_intervention_rate": 0.0,
+      "mean_pre_oracle_intervention_rate": 0.608974,
+      "mean_scenario_oracle_positive_coverage": 1.0,
+      "mean_stopping_margin_violation_frames": 0.0,
+      "mean_time_at_risk_before_expected_action_s": 0.0,
+      "overreaction_run_rate": 0.0,
+      "p95_assurance_response_time_s": 0.0,
+      "p95_policy_response_time_s": 0.2,
+      "post_selection_underreaction_run_rate": 0.0,
+      "pre_oracle_maximum_actions": [
+        "HOVER",
+        "SLOW"
+      ],
+      "runs": 10,
+      "scenario_id": "localization_drift",
+      "support_loss_detection_rate": 1.0,
+      "unexpected_monitor_activation_rate": 0.0
+    },
+    {
+      "exact_expected_action_rate": 1.0,
+      "expected_monitor_activation_rate": 1.0,
+      "maximum_actions": [
+        "HOVER"
+      ],
+      "mean_assurance_response_time_s": 0.0,
+      "mean_early_intervention_lead_s": 0.4,
+      "mean_oracle_first_1s_unsupported_coverage": 1.0,
+      "mean_overreaction_frames": 0.0,
+      "mean_policy_response_time_s": 0.2,
+      "mean_post_selection_underreaction_frames": 0.0,
+      "mean_pre_injection_intervention_rate": 0.0,
+      "mean_pre_oracle_intervention_rate": 0.571429,
+      "mean_scenario_oracle_positive_coverage": 1.0,
+      "mean_stopping_margin_violation_frames": 0.0,
+      "mean_time_at_risk_before_expected_action_s": 0.0,
+      "overreaction_run_rate": 0.0,
+      "p95_assurance_response_time_s": 0.0,
+      "p95_policy_response_time_s": 0.2,
+      "post_selection_underreaction_run_rate": 0.0,
+      "pre_oracle_maximum_actions": [
+        "SLOW"
+      ],
+      "runs": 10,
+      "scenario_id": "lidar_dropout",
+      "support_loss_detection_rate": 1.0,
+      "unexpected_monitor_activation_rate": 0.0
+    },
+    {
+      "exact_expected_action_rate": 1.0,
+      "expected_monitor_activation_rate": 1.0,
+      "maximum_actions": [
+        "HOVER"
+      ],
+      "mean_assurance_response_time_s": 0.01,
+      "mean_early_intervention_lead_s": 0.64,
+      "mean_oracle_first_1s_unsupported_coverage": 0.99,
+      "mean_overreaction_frames": 0.0,
+      "mean_policy_response_time_s": 0.2,
+      "mean_post_selection_underreaction_frames": 0.0,
+      "mean_pre_injection_intervention_rate": 0.0,
+      "mean_pre_oracle_intervention_rate": 0.581818,
+      "mean_scenario_oracle_positive_coverage": 0.999743,
+      "mean_stopping_margin_violation_frames": 0.0,
+      "mean_time_at_risk_before_expected_action_s": 0.01,
+      "overreaction_run_rate": 0.0,
+      "p95_assurance_response_time_s": 0.1,
+      "p95_policy_response_time_s": 0.2,
+      "post_selection_underreaction_run_rate": 0.0,
+      "pre_oracle_maximum_actions": [
+        "SLOW"
+      ],
+      "runs": 10,
+      "scenario_id": "cross_modal_disagreement",
+      "support_loss_detection_rate": 1.0,
+      "unexpected_monitor_activation_rate": 0.0
+    },
+    {
+      "exact_expected_action_rate": 1.0,
+      "expected_monitor_activation_rate": 1.0,
+      "maximum_actions": [
+        "HOVER"
+      ],
+      "mean_assurance_response_time_s": 0.2,
+      "mean_early_intervention_lead_s": 0.2,
+      "mean_oracle_first_1s_unsupported_coverage": 0.8,
+      "mean_overreaction_frames": 0.0,
+      "mean_policy_response_time_s": 0.2,
+      "mean_post_selection_underreaction_frames": 0.0,
+      "mean_pre_injection_intervention_rate": 0.0,
+      "mean_pre_oracle_intervention_rate": 0.125,
+      "mean_scenario_oracle_positive_coverage": 0.994792,
+      "mean_stopping_margin_violation_frames": 384.0,
+      "mean_time_at_risk_before_expected_action_s": 0.2,
+      "overreaction_run_rate": 0.0,
+      "p95_assurance_response_time_s": 0.2,
+      "p95_policy_response_time_s": 0.2,
+      "post_selection_underreaction_run_rate": 0.0,
+      "pre_oracle_maximum_actions": [
+        "SLOW"
+      ],
+      "runs": 10,
+      "scenario_id": "obstacle_intrusion",
+      "support_loss_detection_rate": 1.0,
+      "unexpected_monitor_activation_rate": 0.0
+    },
+    {
+      "exact_expected_action_rate": 1.0,
+      "expected_monitor_activation_rate": 1.0,
+      "maximum_actions": [
+        "RETURN_HOME"
+      ],
+      "mean_assurance_response_time_s": 0.0,
+      "mean_early_intervention_lead_s": 0.9,
+      "mean_oracle_first_1s_unsupported_coverage": 1.0,
+      "mean_overreaction_frames": 0.0,
+      "mean_policy_response_time_s": 0.2,
+      "mean_post_selection_underreaction_frames": 0.0,
+      "mean_pre_injection_intervention_rate": 0.0,
+      "mean_pre_oracle_intervention_rate": 0.692308,
+      "mean_scenario_oracle_positive_coverage": 1.0,
+      "mean_stopping_margin_violation_frames": 0.0,
+      "mean_time_at_risk_before_expected_action_s": 0.0,
+      "overreaction_run_rate": 0.0,
+      "p95_assurance_response_time_s": 0.0,
+      "p95_policy_response_time_s": 0.2,
+      "post_selection_underreaction_run_rate": 0.0,
+      "pre_oracle_maximum_actions": [
+        "SLOW"
+      ],
+      "runs": 10,
+      "scenario_id": "communication_loss",
+      "support_loss_detection_rate": 1.0,
+      "unexpected_monitor_activation_rate": 0.0
+    },
+    {
+      "exact_expected_action_rate": 1.0,
+      "expected_monitor_activation_rate": 1.0,
+      "maximum_actions": [
+        "ABORT"
+      ],
+      "mean_assurance_response_time_s": 0.1,
+      "mean_early_intervention_lead_s": 0.3,
+      "mean_oracle_first_1s_unsupported_coverage": 0.9,
+      "mean_overreaction_frames": 0.0,
+      "mean_policy_response_time_s": 0.2,
+      "mean_post_selection_underreaction_frames": 0.0,
+      "mean_pre_injection_intervention_rate": 0.0,
+      "mean_pre_oracle_intervention_rate": 0.6,
+      "mean_scenario_oracle_positive_coverage": 0.997468,
+      "mean_stopping_margin_violation_frames": 0.0,
+      "mean_time_at_risk_before_expected_action_s": 0.3,
+      "overreaction_run_rate": 0.0,
+      "p95_assurance_response_time_s": 0.1,
+      "p95_policy_response_time_s": 0.2,
+      "post_selection_underreaction_run_rate": 0.0,
+      "pre_oracle_maximum_actions": [
+        "SLOW"
+      ],
+      "runs": 10,
+      "scenario_id": "compound_failure",
+      "support_loss_detection_rate": 1.0,
+      "unexpected_monitor_activation_rate": 0.0
+    }
+  ],
+  "schema_version": "1.1",
+  "scope": "deterministic synthetic telemetry replay, fixed claim-state updates, and fallback recommendation; not physical-flight validation",
+  "seeds_per_scenario": 10,
+  "support_semantics": "SUPPORTED means all persistence-qualified monitor conditions in the fixed top claim remain in their pass state under declared assumptions; it is not a physical-safety classification"
+}

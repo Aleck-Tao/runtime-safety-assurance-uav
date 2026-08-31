@@ -1,0 +1,730 @@
+{
+  "generated_by": "runtime_assurance.pipeline.run_benchmark",
+  "generator_version": "0.1.0",
+  "schema_version": "1.1",
+  "source_files": [
+    {
+      "bytes": 5251,
+      "path": "assurance_case/uav_runtime_case.json",
+      "sha256": "0f26aaf6770c8470d0dc55380dcd885f5451e683d3c88e5a06a30183cf1540c0"
+    },
+    {
+      "bytes": 2077,
+      "path": "config/assurance_policy.json",
+      "sha256": "534041dd4f9ea7152587c45efcbc22d3f3adb1b97bc8f8b27b7ca9c0c76e9a1b"
+    },
+    {
+      "bytes": 1754,
+      "path": "experiments/benchmark_config.json",
+      "sha256": "2d79ff05221e734400b67faef986229863a09f2b6e8864b17ab6e0c01ee94f32"
+    },
+    {
+      "bytes": 7064,
+      "path": "hazards/stpa_model.json",
+      "sha256": "574d9d207620aab8fe494bc4aeabad3da34dcb83fb6cde7e7a0271db20240001"
+    },
+    {
+      "bytes": 509,
+      "path": "pyproject.toml",
+      "sha256": "f3ef5f342be8a901403eabc4d9a736f215a93ad18ee279134534f097cb9e6f30"
+    },
+    {
+      "bytes": 103,
+      "path": "runtime_assurance/__init__.py",
+      "sha256": "cb34e2a4b889fa3a2eb4b55485cd7806256f50ede5c1375a7ecf97a0ac84157c"
+    },
+    {
+      "bytes": 49,
+      "path": "runtime_assurance/__main__.py",
+      "sha256": "0f7d54f3fbb1f79a85eb8110f11793db99da6f3c61ee979de5abe9a1b5f3fdb3"
+    },
+    {
+      "bytes": 12221,
+      "path": "runtime_assurance/assurance_case.py",
+      "sha256": "691a6570f89eae62de73c4dbe47a5549505e389ede2ac22135b2e351ad458fa8"
+    },
+    {
+      "bytes": 2807,
+      "path": "runtime_assurance/cli.py",
+      "sha256": "8f6acd5be026391088fcc5748bfd70828fc9a416739a53a0899b6c8f525bc189"
+    },
+    {
+      "bytes": 6283,
+      "path": "runtime_assurance/config.py",
+      "sha256": "3dea5d4472932f06b6e1ada04ceae4e3089378a1ed0b5a5c55aeb38c002d792b"
+    },
+    {
+      "bytes": 17670,
+      "path": "runtime_assurance/evaluation.py",
+      "sha256": "c3bf7a2566162b538fb460c428a6379b84e94b275082a609e638ba986d13b4c4"
+    },
+    {
+      "bytes": 2827,
+      "path": "runtime_assurance/models.py",
+      "sha256": "1cca84ab76347ea2386be769a20f04540ce4f2611ea54e3a2c62032d842f7d27"
+    },
+    {
+      "bytes": 9707,
+      "path": "runtime_assurance/monitors.py",
+      "sha256": "ade8e6f18ab7460741efce833b0ef25988260fca7c0fff7d8a5cfb9c81451da2"
+    },
+    {
+      "bytes": 12902,
+      "path": "runtime_assurance/pipeline.py",
+      "sha256": "752e1de96fd68b7058506b13c67c6bd406a114efe64a922cf9840583a7da1c10"
+    },
+    {
+      "bytes": 5288,
+      "path": "runtime_assurance/provenance.py",
+      "sha256": "3e676feebc540ddcc074cfa198463b61e5ae3622e7aa8e78f59b01c542b4d7e6"
+    },
+    {
+      "bytes": 7135,
+      "path": "runtime_assurance/reporting.py",
+      "sha256": "264256a2c6e5a9444ae0ecb64e7eb9d6be8243ed1fa77a0e91d31fdcd67408e9"
+    },
+    {
+      "bytes": 12852,
+      "path": "runtime_assurance/simulation.py",
+      "sha256": "5b76c5cce855b83bb0ffabe84b5b2f68aec0f66e81d39a53ad0d4df92ca955aa"
+    },
+    {
+      "bytes": 3130,
+      "path": "runtime_assurance/supervisor.py",
+      "sha256": "25b5a6dddf55c5d48e08cac4a5ac27fa7cf9a696051a8279ae8e3f944b025df3"
+    }
+  ],
+  "trace_count": 70,
+  "traces": [
+    {
+      "bytes": 69738,
+      "path": "data/generated/traces/baseline/seed-101.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "baseline",
+      "seed": 101,
+      "sha256": "81010b00fa512e55ed2c1169a25caffa9a075a562db2b117c5b7a50408d1a688"
+    },
+    {
+      "bytes": 69732,
+      "path": "data/generated/traces/baseline/seed-211.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "baseline",
+      "seed": 211,
+      "sha256": "86c959b48867e8765c80849fa4622076da31dfc69af8fe16bc325903be023b42"
+    },
+    {
+      "bytes": 69743,
+      "path": "data/generated/traces/baseline/seed-307.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "baseline",
+      "seed": 307,
+      "sha256": "766d32ea112a177b6b00ecd02c430d6b5559fe9cd03ca549be6ca54452d0c14f"
+    },
+    {
+      "bytes": 69740,
+      "path": "data/generated/traces/baseline/seed-401.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "baseline",
+      "seed": 401,
+      "sha256": "817f37febc5145f4efb4087e7e94001c37151b0dc0c0da6d40bb41bffd8779f6"
+    },
+    {
+      "bytes": 69746,
+      "path": "data/generated/traces/baseline/seed-503.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "baseline",
+      "seed": 503,
+      "sha256": "01ef50d09e2e5677ba686d19da9704fb1236cb12161f5f30f280bf81986fbde5"
+    },
+    {
+      "bytes": 69734,
+      "path": "data/generated/traces/baseline/seed-601.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "baseline",
+      "seed": 601,
+      "sha256": "bd31559a6d98f8384895633237a4e57e024ec1632bb3aafb2a6c774f2ba2eae5"
+    },
+    {
+      "bytes": 69737,
+      "path": "data/generated/traces/baseline/seed-701.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "baseline",
+      "seed": 701,
+      "sha256": "57cc937e52ba0215113ed48704777d6b0d5a923a2a9b50eab37597c5999b2921"
+    },
+    {
+      "bytes": 69729,
+      "path": "data/generated/traces/baseline/seed-809.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "baseline",
+      "seed": 809,
+      "sha256": "0cf99e44976eaf3785b1a8a437960e644c068bac3e5742bd870cdc26787968b9"
+    },
+    {
+      "bytes": 69733,
+      "path": "data/generated/traces/baseline/seed-907.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "baseline",
+      "seed": 907,
+      "sha256": "4d648b33681efae5bdc4456a26d8dd0e49c8864f5856ea2b64d8acd1a97f4246"
+    },
+    {
+      "bytes": 70935,
+      "path": "data/generated/traces/baseline/seed-1009.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "baseline",
+      "seed": 1009,
+      "sha256": "6f13568614885ec5e857f7250f9433e3798e9adfdd5a045ca6c9b33e695aad64"
+    },
+    {
+      "bytes": 89348,
+      "path": "data/generated/traces/localization_drift/seed-101.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "localization_drift",
+      "seed": 101,
+      "sha256": "ccecee2697ddceedb1f5e512da38c42fa9edcf0728f646c605768a05817ea64e"
+    },
+    {
+      "bytes": 89345,
+      "path": "data/generated/traces/localization_drift/seed-211.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "localization_drift",
+      "seed": 211,
+      "sha256": "c06c44afaf2b3483304daac752b08dc294a559160a310a6b3d354379b7daa331"
+    },
+    {
+      "bytes": 89365,
+      "path": "data/generated/traces/localization_drift/seed-307.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "localization_drift",
+      "seed": 307,
+      "sha256": "36ce71d25ae810eafd52b2eb9273dbf23ea8c02488946abfbf7fb0834f3931d1"
+    },
+    {
+      "bytes": 89346,
+      "path": "data/generated/traces/localization_drift/seed-401.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "localization_drift",
+      "seed": 401,
+      "sha256": "87118a44781532538f2d6875ccf1df1b22cfa1e18e746fad18591859be34e14a"
+    },
+    {
+      "bytes": 89352,
+      "path": "data/generated/traces/localization_drift/seed-503.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "localization_drift",
+      "seed": 503,
+      "sha256": "2799b44e89b11ebe3da438920ce4c69ee011143f9180cf857524fa27cc860f60"
+    },
+    {
+      "bytes": 89348,
+      "path": "data/generated/traces/localization_drift/seed-601.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "localization_drift",
+      "seed": 601,
+      "sha256": "6c5cccd22b54f3bd4e6c0bed993793c83777c6037d0e9f9bc63420fed80ca17e"
+    },
+    {
+      "bytes": 89342,
+      "path": "data/generated/traces/localization_drift/seed-701.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "localization_drift",
+      "seed": 701,
+      "sha256": "0d0d059483c447c89c6a567bd0efd151a036c9201ea1906cf71c9a4f10298228"
+    },
+    {
+      "bytes": 89354,
+      "path": "data/generated/traces/localization_drift/seed-809.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "localization_drift",
+      "seed": 809,
+      "sha256": "4535b0182f6caf026da3bfcd15ee73b929215f8dace942010b47a28bc8e80689"
+    },
+    {
+      "bytes": 89339,
+      "path": "data/generated/traces/localization_drift/seed-907.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "localization_drift",
+      "seed": 907,
+      "sha256": "0dd9d9c561983ef574ae888ca07c84af68c12ba4c5e80df6385b6a1091ca00ab"
+    },
+    {
+      "bytes": 90552,
+      "path": "data/generated/traces/localization_drift/seed-1009.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "localization_drift",
+      "seed": 1009,
+      "sha256": "944ed23399f92bfc64c7f88b8af00c5af80ddb926e706c163b5640eb32b0786f"
+    },
+    {
+      "bytes": 81393,
+      "path": "data/generated/traces/lidar_dropout/seed-101.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "lidar_dropout",
+      "seed": 101,
+      "sha256": "70927d844a238154a9c0274ce1f14078863da2b59f7df8671d6873bf90639ca2"
+    },
+    {
+      "bytes": 81387,
+      "path": "data/generated/traces/lidar_dropout/seed-211.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "lidar_dropout",
+      "seed": 211,
+      "sha256": "52e7e0653968b603c043051f0b7273e3a47f0dc73ee7cb9901a147154a563572"
+    },
+    {
+      "bytes": 81391,
+      "path": "data/generated/traces/lidar_dropout/seed-307.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "lidar_dropout",
+      "seed": 307,
+      "sha256": "9d9f5f4ca9d6bb3daa4d04e9c8594c19abeda6fff8dfbdf89a527660ada07ebb"
+    },
+    {
+      "bytes": 81394,
+      "path": "data/generated/traces/lidar_dropout/seed-401.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "lidar_dropout",
+      "seed": 401,
+      "sha256": "3aaf50d433900972dee2bd035a482423d17dbe71d83f5fb606a408dbe018b250"
+    },
+    {
+      "bytes": 81395,
+      "path": "data/generated/traces/lidar_dropout/seed-503.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "lidar_dropout",
+      "seed": 503,
+      "sha256": "81dec94c256092a510c061207700681b0b339204f089454615b0247f035045c4"
+    },
+    {
+      "bytes": 81391,
+      "path": "data/generated/traces/lidar_dropout/seed-601.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "lidar_dropout",
+      "seed": 601,
+      "sha256": "472bcceb929b406b89f1b0501006fe1cab25bd85aa8a4eae9da37ba10fd8d694"
+    },
+    {
+      "bytes": 81386,
+      "path": "data/generated/traces/lidar_dropout/seed-701.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "lidar_dropout",
+      "seed": 701,
+      "sha256": "17a3c4ef2274f05bdd0f0c8667442e5ae11184b9c101ba11387a1013257a9ca2"
+    },
+    {
+      "bytes": 81398,
+      "path": "data/generated/traces/lidar_dropout/seed-809.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "lidar_dropout",
+      "seed": 809,
+      "sha256": "a7777e05ac45cdea3f98bda8946040b13915954a34203a1b618091fe39e2467e"
+    },
+    {
+      "bytes": 81383,
+      "path": "data/generated/traces/lidar_dropout/seed-907.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "lidar_dropout",
+      "seed": 907,
+      "sha256": "6e72cd5ae0a3df0f2ee643fec7c787f35dbeab4d3a891563cc4539a811bc5099"
+    },
+    {
+      "bytes": 82583,
+      "path": "data/generated/traces/lidar_dropout/seed-1009.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "lidar_dropout",
+      "seed": 1009,
+      "sha256": "08e013cb01def17f156c3e85f356383c0bffa22c6b471b0d80c9748bcddf448c"
+    },
+    {
+      "bytes": 100146,
+      "path": "data/generated/traces/cross_modal_disagreement/seed-101.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "cross_modal_disagreement",
+      "seed": 101,
+      "sha256": "1fea494f871e797d7c5674dabd4e25c23778a49e43b3fc2eab4e48fee9248cb8"
+    },
+    {
+      "bytes": 100143,
+      "path": "data/generated/traces/cross_modal_disagreement/seed-211.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "cross_modal_disagreement",
+      "seed": 211,
+      "sha256": "85311aae0ff24a36599efa4365721207468590d6388eac281b191c65f13c63d2"
+    },
+    {
+      "bytes": 100164,
+      "path": "data/generated/traces/cross_modal_disagreement/seed-307.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "cross_modal_disagreement",
+      "seed": 307,
+      "sha256": "e00d25b92ef9e4f088d027c8e93d42ad6782f79ddf96109845a0a2e2715c15ad"
+    },
+    {
+      "bytes": 100144,
+      "path": "data/generated/traces/cross_modal_disagreement/seed-401.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "cross_modal_disagreement",
+      "seed": 401,
+      "sha256": "aea7dc61be420cc72a0106662ad2e7982b1dceeb62e70f6e1c8490820ae8d796"
+    },
+    {
+      "bytes": 100150,
+      "path": "data/generated/traces/cross_modal_disagreement/seed-503.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "cross_modal_disagreement",
+      "seed": 503,
+      "sha256": "e60bbac4c56dee29afd7401a78d937b4b464f02a6f6ed4affaeff74162bd761f"
+    },
+    {
+      "bytes": 100147,
+      "path": "data/generated/traces/cross_modal_disagreement/seed-601.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "cross_modal_disagreement",
+      "seed": 601,
+      "sha256": "2bf6cd6c39e7f2cf126ade7c196973b57f8c0a7d7098f39fff7ef8cd5ce12a9f"
+    },
+    {
+      "bytes": 100140,
+      "path": "data/generated/traces/cross_modal_disagreement/seed-701.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "cross_modal_disagreement",
+      "seed": 701,
+      "sha256": "38c7cb2ad1df4a5aa6f91afa165faf071d200a25e9572cf41629979cc458bd64"
+    },
+    {
+      "bytes": 100152,
+      "path": "data/generated/traces/cross_modal_disagreement/seed-809.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "cross_modal_disagreement",
+      "seed": 809,
+      "sha256": "ad7979a0511351bc0c0544dac4f4faa9aab7e88b6c76c232392295eef8afaaef"
+    },
+    {
+      "bytes": 100137,
+      "path": "data/generated/traces/cross_modal_disagreement/seed-907.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "cross_modal_disagreement",
+      "seed": 907,
+      "sha256": "6986a3e7d43149c9c5409e50029eb2c0fcf28d72f720493346ca26ede928ed52"
+    },
+    {
+      "bytes": 101350,
+      "path": "data/generated/traces/cross_modal_disagreement/seed-1009.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "cross_modal_disagreement",
+      "seed": 1009,
+      "sha256": "39b506d5500f5f004a71655b99ff81fa1890f773f8160f66b3cfa44d1052e13a"
+    },
+    {
+      "bytes": 88955,
+      "path": "data/generated/traces/obstacle_intrusion/seed-101.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "obstacle_intrusion",
+      "seed": 101,
+      "sha256": "6172a34906caa09bf88593b0749d7c9dff0602c0ff7daff7011c7fbe2f61f9ae"
+    },
+    {
+      "bytes": 88952,
+      "path": "data/generated/traces/obstacle_intrusion/seed-211.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "obstacle_intrusion",
+      "seed": 211,
+      "sha256": "6e2294456b0e8a428c16c11cb5590d456bbb02f90ba57ca82550e593d4a0e8d4"
+    },
+    {
+      "bytes": 88973,
+      "path": "data/generated/traces/obstacle_intrusion/seed-307.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "obstacle_intrusion",
+      "seed": 307,
+      "sha256": "001583d02dfaa7e9cf23b4afe2414c5c1ba01e8905bed2ae1be5929359e236a6"
+    },
+    {
+      "bytes": 88953,
+      "path": "data/generated/traces/obstacle_intrusion/seed-401.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "obstacle_intrusion",
+      "seed": 401,
+      "sha256": "9dc1def8dc20784e5ab86298c6e37b1adea82a3288d17377b5054cdb0abcdecf"
+    },
+    {
+      "bytes": 88959,
+      "path": "data/generated/traces/obstacle_intrusion/seed-503.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "obstacle_intrusion",
+      "seed": 503,
+      "sha256": "f1f2c5974acdefc0adcdba732a75103234fb1799e62e71e9f4f1d7a0d41f22ba"
+    },
+    {
+      "bytes": 88956,
+      "path": "data/generated/traces/obstacle_intrusion/seed-601.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "obstacle_intrusion",
+      "seed": 601,
+      "sha256": "aaf49a825d24c6139e5ee67386f5af854a124c5a98faa8661ca2141505161125"
+    },
+    {
+      "bytes": 88949,
+      "path": "data/generated/traces/obstacle_intrusion/seed-701.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "obstacle_intrusion",
+      "seed": 701,
+      "sha256": "42db1a0aba9c1aff81a226b68ef95cb5761e20695d5078af609e9edbf0cde4e9"
+    },
+    {
+      "bytes": 88961,
+      "path": "data/generated/traces/obstacle_intrusion/seed-809.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "obstacle_intrusion",
+      "seed": 809,
+      "sha256": "a681b96f56bbc831d01416ff3fab141be56e90f91a209174d6dfdd81f87dd755"
+    },
+    {
+      "bytes": 88946,
+      "path": "data/generated/traces/obstacle_intrusion/seed-907.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "obstacle_intrusion",
+      "seed": 907,
+      "sha256": "7f20e0ff3d6355ca03f275f03943a5764b4d602cd4aa3d7c0eeae07c0e342aa3"
+    },
+    {
+      "bytes": 90159,
+      "path": "data/generated/traces/obstacle_intrusion/seed-1009.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "obstacle_intrusion",
+      "seed": 1009,
+      "sha256": "469e439626cfe13462423c693fb84822e0377ade9b4a9b97e85c1b0bb5bd14dc"
+    },
+    {
+      "bytes": 90400,
+      "path": "data/generated/traces/communication_loss/seed-101.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "communication_loss",
+      "seed": 101,
+      "sha256": "da244a78976c2c3c398b65db4d5d8e6a7fd2b1a1c3d5bf7e54be00938e211a6b"
+    },
+    {
+      "bytes": 90399,
+      "path": "data/generated/traces/communication_loss/seed-211.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "communication_loss",
+      "seed": 211,
+      "sha256": "2dc08b84763c4e4d49d723989ff66f1c4ba8dc5c3713226d9eb3e0e2bd5545ae"
+    },
+    {
+      "bytes": 90403,
+      "path": "data/generated/traces/communication_loss/seed-307.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "communication_loss",
+      "seed": 307,
+      "sha256": "1a906aaf3e7a402200eca67fe43d6781cd6299af7734d0b6d26f38403a8d1612"
+    },
+    {
+      "bytes": 90400,
+      "path": "data/generated/traces/communication_loss/seed-401.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "communication_loss",
+      "seed": 401,
+      "sha256": "f64fde354025e27f7c9b1c0690c06963b78ca2541166ca1a2ae1174826005da4"
+    },
+    {
+      "bytes": 90405,
+      "path": "data/generated/traces/communication_loss/seed-503.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "communication_loss",
+      "seed": 503,
+      "sha256": "b1a2eb110958a8501c1bc3694e6236d351bdf8b4d58a2f6221f708cb59c194fd"
+    },
+    {
+      "bytes": 90403,
+      "path": "data/generated/traces/communication_loss/seed-601.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "communication_loss",
+      "seed": 601,
+      "sha256": "7085d7d963bf4b68336a748dec3234ca79fcb5ae64f87443685227c06f7d83bc"
+    },
+    {
+      "bytes": 90401,
+      "path": "data/generated/traces/communication_loss/seed-701.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "communication_loss",
+      "seed": 701,
+      "sha256": "15dc7e7667af1614293687b4e99e7c3ea1f28200f3cf038c2ce414c45b962a43"
+    },
+    {
+      "bytes": 90397,
+      "path": "data/generated/traces/communication_loss/seed-809.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "communication_loss",
+      "seed": 809,
+      "sha256": "b3a7e6c411a2aeb03016405ec3879123c0489023f3d1e86117cc9b360fd3d4f5"
+    },
+    {
+      "bytes": 90397,
+      "path": "data/generated/traces/communication_loss/seed-907.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "communication_loss",
+      "seed": 907,
+      "sha256": "e47a00501a006b3ee739bf3bcd19a390693d6d34022a233a8b31ee8def455408"
+    },
+    {
+      "bytes": 91598,
+      "path": "data/generated/traces/communication_loss/seed-1009.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "communication_loss",
+      "seed": 1009,
+      "sha256": "ab03249c4678db4155b9facd10314aa45cbfeaa93e6a0e380b22aceb906dba59"
+    },
+    {
+      "bytes": 88290,
+      "path": "data/generated/traces/compound_failure/seed-101.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "compound_failure",
+      "seed": 101,
+      "sha256": "83d651527f423e29ccd51ef42b89af9404d255e9cbe1f7e44681d63ab1302809"
+    },
+    {
+      "bytes": 88289,
+      "path": "data/generated/traces/compound_failure/seed-211.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "compound_failure",
+      "seed": 211,
+      "sha256": "b64f2f97a94495afeb748a172fbe9e419a4639736d38b9e17882d77f7087e1b2"
+    },
+    {
+      "bytes": 88293,
+      "path": "data/generated/traces/compound_failure/seed-307.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "compound_failure",
+      "seed": 307,
+      "sha256": "d11060273a5953cfa7d2818766128e0276246e8c08f9af7bd6b87cc8f1a5e063"
+    },
+    {
+      "bytes": 88290,
+      "path": "data/generated/traces/compound_failure/seed-401.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "compound_failure",
+      "seed": 401,
+      "sha256": "10bb3d63ac59e91ea06d0f16f96801190d95f0b98dee95a8adf6a03648616d11"
+    },
+    {
+      "bytes": 88295,
+      "path": "data/generated/traces/compound_failure/seed-503.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "compound_failure",
+      "seed": 503,
+      "sha256": "5804ec3f029a7b4a5ba79b21288c40937eb74c9fe1b4e56f952b07974e072d1b"
+    },
+    {
+      "bytes": 88293,
+      "path": "data/generated/traces/compound_failure/seed-601.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "compound_failure",
+      "seed": 601,
+      "sha256": "b0bf39585b9740c845452a5c5f407b1da86d7e094d72175900de27289780fefb"
+    },
+    {
+      "bytes": 88291,
+      "path": "data/generated/traces/compound_failure/seed-701.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "compound_failure",
+      "seed": 701,
+      "sha256": "3e4c67ae670bdd9286a249c44846ae4e9f71507c20fb7721c8a818c1bf6e34e8"
+    },
+    {
+      "bytes": 88287,
+      "path": "data/generated/traces/compound_failure/seed-809.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "compound_failure",
+      "seed": 809,
+      "sha256": "89d3536d07f9f671a45af58b39a54f544bd5e29b003f75c75ffa639439647947"
+    },
+    {
+      "bytes": 88287,
+      "path": "data/generated/traces/compound_failure/seed-907.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "compound_failure",
+      "seed": 907,
+      "sha256": "6b041c864a7a671bd56c4da3c5fa9e05fc47b02e486d30d868a86ce350f1ee18"
+    },
+    {
+      "bytes": 89488,
+      "path": "data/generated/traces/compound_failure/seed-1009.csv",
+      "provenance": "deterministically generated telemetry; no SITL, HIL, or flight data",
+      "rows": 600,
+      "scenario_id": "compound_failure",
+      "seed": 1009,
+      "sha256": "2af1f34dfc1d8451b0b9f6b7b9cdd1aa4f54a82d98ec8c8eab6e9033c19acdda"
+    }
+  ]
+}
