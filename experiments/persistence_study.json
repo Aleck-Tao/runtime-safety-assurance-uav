@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "sample_period_s": 0.1,
+  "assessment_samples": 150,
+  "seeds": [101, 211, 307, 401, 503],
+  "failure_samples": [1, 3, 5],
+  "families": {
+    "localization": {"monitor_id": "M-LOC", "failure_thresholds": [0.50, 0.55, 0.60], "oracle_threshold": 0.45},
+    "obstacle": {"monitor_id": "M-OBS-MARGIN", "failure_thresholds": [-0.10, 0.00, 0.20], "oracle_threshold": 0.00}
+  },
+  "patterns": ["short_pulses", "boundary_noise", "repeated_recovery", "slow_ramp"]
+}

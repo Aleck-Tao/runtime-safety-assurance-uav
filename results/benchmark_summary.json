@@ -380,7 +380,7 @@
       "scenario_id": "compound_failure"
     }
   ],
-  "data_manifest_sha256": "bc6a548482985aaf731491f66ff1ceec172ac184ccb466fa28f4a9bfb7450986",
+  "data_manifest_sha256": "5b27910a144ac574949eb2127d852a6d2770b6073b2ff57e3fa39e6ea7f19bef",
   "declared_assumptions": [
     {
       "id": "A-TELEM",

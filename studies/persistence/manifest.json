@@ -1,0 +1,143 @@
+{
+  "generated_by": "runtime-assurance persistence-study",
+  "results": [
+    {
+      "bytes": 27266,
+      "path": "summary.json",
+      "sha256": "22996dbdd3ecf59a36a9fc4e86067396466df761b99bc2d4d681d19b2220a2a3"
+    },
+    {
+      "bytes": 37786,
+      "path": "runs.csv",
+      "sha256": "8c17cf702d531d73a5d7b7e25d2642c45e2396b91b05c309343abd6e7a89d096"
+    },
+    {
+      "bytes": 65237,
+      "path": "events.csv",
+      "sha256": "c713a6ca59d426aa05d4f1b455e5b5fbbf72b5ab734c6393ab4e0d5127c7d299"
+    },
+    {
+      "bytes": 527226,
+      "path": "telemetry.csv",
+      "sha256": "252ba56d8f27b2dc28b991b50cb22b8deed0fb4e8fa29a8e562ccc4e029d702d"
+    },
+    {
+      "bytes": 401308,
+      "path": "transitions.csv",
+      "sha256": "4102c5bd3962796d7e293bba39da12ddbcd1c9d9805c33c2be4e4165f5255142"
+    }
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "bytes": 1213,
+      "path": ".github/workflows/ci.yml",
+      "sha256": "6952b298f76ceafbaf8b73b340596556d8a42a31498984b324bc7bb7afdce522"
+    },
+    {
+      "bytes": 5251,
+      "path": "assurance_case/uav_runtime_case.json",
+      "sha256": "0f26aaf6770c8470d0dc55380dcd885f5451e683d3c88e5a06a30183cf1540c0"
+    },
+    {
+      "bytes": 2077,
+      "path": "config/assurance_policy.json",
+      "sha256": "534041dd4f9ea7152587c45efcbc22d3f3adb1b97bc8f8b27b7ca9c0c76e9a1b"
+    },
+    {
+      "bytes": 1754,
+      "path": "experiments/benchmark_config.json",
+      "sha256": "2d79ff05221e734400b67faef986229863a09f2b6e8864b17ab6e0c01ee94f32"
+    },
+    {
+      "bytes": 485,
+      "path": "experiments/persistence_study.json",
+      "sha256": "2be2d875af0fd97485aca1a39fdb7f131e1ccef78282c5edc34c5d263c2e933f"
+    },
+    {
+      "bytes": 7064,
+      "path": "hazards/stpa_model.json",
+      "sha256": "574d9d207620aab8fe494bc4aeabad3da34dcb83fb6cde7e7a0271db20240001"
+    },
+    {
+      "bytes": 509,
+      "path": "pyproject.toml",
+      "sha256": "f3ef5f342be8a901403eabc4d9a736f215a93ad18ee279134534f097cb9e6f30"
+    },
+    {
+      "bytes": 103,
+      "path": "runtime_assurance/__init__.py",
+      "sha256": "cb34e2a4b889fa3a2eb4b55485cd7806256f50ede5c1375a7ecf97a0ac84157c"
+    },
+    {
+      "bytes": 49,
+      "path": "runtime_assurance/__main__.py",
+      "sha256": "0f7d54f3fbb1f79a85eb8110f11793db99da6f3c61ee979de5abe9a1b5f3fdb3"
+    },
+    {
+      "bytes": 12221,
+      "path": "runtime_assurance/assurance_case.py",
+      "sha256": "691a6570f89eae62de73c4dbe47a5549505e389ede2ac22135b2e351ad458fa8"
+    },
+    {
+      "bytes": 3326,
+      "path": "runtime_assurance/cli.py",
+      "sha256": "692edd2dcc2778ab3cc490552580635abe290f8ffd6e8ed4f465a03864a2935e"
+    },
+    {
+      "bytes": 6283,
+      "path": "runtime_assurance/config.py",
+      "sha256": "3dea5d4472932f06b6e1ada04ceae4e3089378a1ed0b5a5c55aeb38c002d792b"
+    },
+    {
+      "bytes": 17670,
+      "path": "runtime_assurance/evaluation.py",
+      "sha256": "c3bf7a2566162b538fb460c428a6379b84e94b275082a609e638ba986d13b4c4"
+    },
+    {
+      "bytes": 2827,
+      "path": "runtime_assurance/models.py",
+      "sha256": "1cca84ab76347ea2386be769a20f04540ce4f2611ea54e3a2c62032d842f7d27"
+    },
+    {
+      "bytes": 9707,
+      "path": "runtime_assurance/monitors.py",
+      "sha256": "ade8e6f18ab7460741efce833b0ef25988260fca7c0fff7d8a5cfb9c81451da2"
+    },
+    {
+      "bytes": 15278,
+      "path": "runtime_assurance/persistence_study.py",
+      "sha256": "7fa7191399dda7b037ccc0cc7181c36a03aaf9a3e3084e421b7df33eeecfdabb"
+    },
+    {
+      "bytes": 12902,
+      "path": "runtime_assurance/pipeline.py",
+      "sha256": "752e1de96fd68b7058506b13c67c6bd406a114efe64a922cf9840583a7da1c10"
+    },
+    {
+      "bytes": 5288,
+      "path": "runtime_assurance/provenance.py",
+      "sha256": "3e676feebc540ddcc074cfa198463b61e5ae3622e7aa8e78f59b01c542b4d7e6"
+    },
+    {
+      "bytes": 7135,
+      "path": "runtime_assurance/reporting.py",
+      "sha256": "264256a2c6e5a9444ae0ecb64e7eb9d6be8243ed1fa77a0e91d31fdcd67408e9"
+    },
+    {
+      "bytes": 12852,
+      "path": "runtime_assurance/simulation.py",
+      "sha256": "5b76c5cce855b83bb0ffabe84b5b2f68aec0f66e81d39a53ad0d4df92ca955aa"
+    },
+    {
+      "bytes": 3130,
+      "path": "runtime_assurance/supervisor.py",
+      "sha256": "25b5a6dddf55c5d48e08cac4a5ac27fa7cf9a696051a8279ae8e3f944b025df3"
+    },
+    {
+      "bytes": 5359,
+      "path": "tests/test_persistence_study.py",
+      "sha256": "b9e1faf7ef93fe25d1d946513d5bd1e9ab8cb6ae8bbdee05d27a4e98bf7ce9da"
+    }
+  ]
+}

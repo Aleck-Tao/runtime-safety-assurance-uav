@@ -1,5 +1,5 @@
 {
-  "data_manifest_sha256": "bc6a548482985aaf731491f66ff1ceec172ac184ccb466fa28f4a9bfb7450986",
+  "data_manifest_sha256": "5b27910a144ac574949eb2127d852a6d2770b6073b2ff57e3fa39e6ea7f19bef",
   "generated_by": "runtime_assurance.pipeline.run_benchmark",
   "generator_version": "0.1.0",
   "result_count": 12,
@@ -22,7 +22,7 @@
     {
       "bytes": 21751,
       "path": "results/benchmark_summary.json",
-      "sha256": "1b03c9f58c0ef13d8f121c792986e5bcc589751393f7b5c226f0afa028814a2f"
+      "sha256": "9c48ee766e892e4e7e15fbbe243a03b80582d9178941f27a487db8e31751f2e5"
     },
     {
       "bytes": 899616,

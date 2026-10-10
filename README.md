@@ -28,6 +28,8 @@ Three details matter more than the overall pass count:
 
 The [run table](results/benchmark_runs.csv), [transition table](results/representative_transitions.csv), and [per-scenario timelines](results/case_timelines) support these observations. [Result analysis](docs/result_analysis.md) works through the timing, stopping-distance sensitivity, and interpretation of early intervention.
 
+A new [threshold/persistence study](docs/persistence_study.md) adds 360 replays of short faults, boundary noise, repeated recovery and ramps. Requiring 1, 3 or 5 failing samples detects 100%, 50% or 25% of the constructed short events. On localization noise at the original `0.55` failure threshold, the same settings produce 25, 4 or 0 unmatched hover episodes across five traces. The event tables expose the tradeoff that the original sustained-fault fixtures could not measure.
+
 ![Replay results](results/benchmark_dashboard.svg)
 
 ## Model and policy
@@ -59,6 +61,7 @@ python -m pip install -e .
 runtime-assurance validate --root .
 runtime-assurance verify --root .
 runtime-assurance benchmark --root .
+runtime-assurance persistence-study --root . --check
 ```
 
 `benchmark` regenerates the telemetry and results. To confirm a matching replay, run `runtime-assurance verify --root .` followed by `git diff --exit-code -- data/generated results`. CI repeats this on Linux and Windows. The [traceability map](docs/traceability.md) connects the supervisor model to executable checks; [data provenance](docs/data_provenance.md) describes the source, trace, and result bindings.

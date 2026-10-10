@@ -44,9 +44,9 @@
       "sha256": "691a6570f89eae62de73c4dbe47a5549505e389ede2ac22135b2e351ad458fa8"
     },
     {
-      "bytes": 2807,
+      "bytes": 3326,
       "path": "runtime_assurance/cli.py",
-      "sha256": "8f6acd5be026391088fcc5748bfd70828fc9a416739a53a0899b6c8f525bc189"
+      "sha256": "692edd2dcc2778ab3cc490552580635abe290f8ffd6e8ed4f465a03864a2935e"
     },
     {
       "bytes": 6283,
@@ -67,6 +67,11 @@
       "bytes": 9707,
       "path": "runtime_assurance/monitors.py",
       "sha256": "ade8e6f18ab7460741efce833b0ef25988260fca7c0fff7d8a5cfb9c81451da2"
+    },
+    {
+      "bytes": 15278,
+      "path": "runtime_assurance/persistence_study.py",
+      "sha256": "7fa7191399dda7b037ccc0cc7181c36a03aaf9a3e3084e421b7df33eeecfdabb"
     },
     {
       "bytes": 12902,

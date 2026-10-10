@@ -3,6 +3,9 @@ name: runtime-assurance-reproducibility
 on:
   push:
   pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '41 1 * * 1'
 
 jobs:
   test-and-reproduce:
@@ -25,6 +28,8 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Verify committed provenance
         run: runtime-assurance verify --root .
+      - name: Reproduce threshold and persistence study
+        run: runtime-assurance persistence-study --root . --check
       - name: Regenerate benchmark evidence
         run: runtime-assurance benchmark --root .
       - name: Verify regenerated provenance

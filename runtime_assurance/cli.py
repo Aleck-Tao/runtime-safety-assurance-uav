@@ -34,6 +34,9 @@ def build_parser() -> argparse.ArgumentParser:
         "benchmark", help="Regenerate telemetry, replay the case, and write evidence"
     )
     benchmark.add_argument("--root", type=Path, default=PROJECT_ROOT)
+    study = subparsers.add_parser("persistence-study", help="run the event-level threshold and persistence study")
+    study.add_argument("--root", type=Path, default=PROJECT_ROOT)
+    study.add_argument("--check", action="store_true")
     return parser
 
 
@@ -58,6 +61,11 @@ def _validate(root: Path) -> dict[str, object]:
 def main(argv: Sequence[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     try:
+        if args.command == "persistence-study":
+            from .persistence_study import check_study, run_study
+            result = check_study(args.root) if args.check else run_study(args.root)
+            print(json.dumps(result, indent=2, sort_keys=True))
+            return 0
         if args.command == "validate":
             result = _validate(args.root)
             print(json.dumps(result, indent=2, sort_keys=True))
